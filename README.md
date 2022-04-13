@@ -35,23 +35,37 @@ https://kafka.apache.org/documentation/#introduction
 Answer these questions with what you can find on the documentation :
 
 - What problems does Kafka solve ?
+It allows users to gather all entry points in one environment to send them back to the adapted output service
 
 - Which use cases ?
+To process payments and financial transactions in real-time, such as in stock exchanges, banks, and insurances.
+To track and monitor cars, trucks, fleets, and shipments in real-time, such as in logistics and the automotive industry.
+To continuously capture and analyze sensor data from IoT devices or other equipment, such as in factories and wind parks.
+To collect and immediately react to customer interactions and orders, such as in retail, the hotel and travel industry, and mobile applications.
+To monitor patients in hospital care and predict changes in condition to ensure timely treatment in emergencies.
+To connect, store, and make available data produced by different divisions of a company.
+To serve as the foundation for data platforms, event-driven architectures, and microservices
 
 - What is a producer ?
+Producers are those client applications that publish (write) events to Kafka
 
 - What is a consumer ?
+Consumers are those that subscribe to (read and process) these events
 
 - What are consumer groups ?
+Consumer groups are people that may run the same events
 
 - What is a offset ?
+The offset is a unique id assigned to the partitions, which contains messages
 
 - Why using partitions ? 
+The topics are partitioned because spreading the topic over "buckets" enables users to read and write the data from the brockers (scalability)
 
 - Why using replication ?
+So that there are always multiple brokers that have a copy of the data just in case things go wrong, you want to do maintenance on the brokers, and so on.
 
 - What are  In-Sync Replicas (ISR) ?
-
+Kafka considers that a record is committed when all replicas in the In-Sync Replica set (ISR) have confirmed that they have written the record to disk.
 
 ![](https://content.linkedin.com/content/dam/engineering/en-us/blog/migrated/datapipeline_simple.png)
 
